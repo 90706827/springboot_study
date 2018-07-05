@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    tomcat:
+      max-active: 100
+      max-idle: 10
+      default-auto-commit: true
+      test-on-borrow: true
+      time-between-eviction-runs-millis: 900000
+      min-evictable-idle-time-millis: 1800000
+      validation-query: select 1 from dual
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/jangni?useUnicode=true&characterEncoding=utf-8
+server:
+  port: 8080
+  context-path: /jpa

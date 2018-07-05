@@ -8,6 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>springboot_scheduling</module>
+		<module>springboot_jpa_mysql</module>
 	</modules>
 	<packaging>pom</packaging>
 
