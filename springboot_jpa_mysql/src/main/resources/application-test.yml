@@ -1,7 +1,4 @@
 spring:
-  profiles:
-  # 环境 默认dev开发 test测试 prod生产
-    active: dev
   datasource:
     tomcat:
       max-active: 100
@@ -16,15 +13,5 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/jangni?useUnicode=true&characterEncoding=utf-8
 server:
-  port: 8080
+  port: 8081
   context-path: /jpa
-# 自定义及随机数
-com:
-  jangni:
-    blog:
-      name: 张三
-      value: ${random.value}
-      number: ${random.int}
-      bignumber: ${random.long}
-      test1: ${random.int(10)}
-      test2: ${random.int[10,20]}

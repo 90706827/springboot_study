@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "t_m_user", schema = "jangni", catalog = "")
 public class UserEntity {
-    private int id;
+    private Long id;
     private String userName;
     private String userPassword;
     private Integer userAge;
@@ -25,11 +25,11 @@ public class UserEntity {
 
     @Id
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -121,40 +121,5 @@ public class UserEntity {
 
     public void setUserCreateTime(java.sql.Timestamp userCreateTime) {
         this.userCreateTime = userCreateTime;
-    }
-
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-
-        UserEntity that = (UserEntity) object;
-
-        if (id != that.id) return false;
-        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
-        if (userPassword != null ? !userPassword.equals(that.userPassword) : that.userPassword != null) return false;
-        if (userAge != null ? !userAge.equals(that.userAge) : that.userAge != null) return false;
-        if (userTel != null ? !userTel.equals(that.userTel) : that.userTel != null) return false;
-        if (userEmail != null ? !userEmail.equals(that.userEmail) : that.userEmail != null) return false;
-        if (userNickName != null ? !userNickName.equals(that.userNickName) : that.userNickName != null) return false;
-        if (userHeadPortrait != null ? !userHeadPortrait.equals(that.userHeadPortrait) : that.userHeadPortrait != null)
-            return false;
-        if (userRandomKey != null ? !userRandomKey.equals(that.userRandomKey) : that.userRandomKey != null)
-            return false;
-        return true;
-    }
-
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + id;
-        result = 31 * result + (userName != null ? userName.hashCode() : 0);
-        result = 31 * result + (userPassword != null ? userPassword.hashCode() : 0);
-        result = 31 * result + (userAge != null ? userAge.hashCode() : 0);
-        result = 31 * result + (userTel != null ? userTel.hashCode() : 0);
-        result = 31 * result + (userEmail != null ? userEmail.hashCode() : 0);
-        result = 31 * result + (userNickName != null ? userNickName.hashCode() : 0);
-        result = 31 * result + (userHeadPortrait != null ? userHeadPortrait.hashCode() : 0);
-        result = 31 * result + (userRandomKey != null ? userRandomKey.hashCode() : 0);
-        return result;
     }
 }

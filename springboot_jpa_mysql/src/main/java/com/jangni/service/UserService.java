@@ -18,7 +18,23 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<UserEntity> getUserEntityList(){
+    public List<UserEntity> getUserEntityList() {
         return userRepository.findAll();
+    }
+
+    public void save(UserEntity userEntity) {
+        userRepository.save(userEntity);
+    }
+
+    public UserEntity findUserById(long id) {
+        return userRepository.findOne(id);
+    }
+
+    public void edit(UserEntity user){
+        userRepository.update(user);
+    }
+
+    public void delete(long id){
+        userRepository.delete(id);
     }
 }
